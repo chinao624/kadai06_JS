@@ -1,0 +1,197 @@
+body {
+  background-color: #fff8dc;
+}
+
+#title-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+}
+
+h1 {
+  font-family: "Yusei Magic", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 48px;
+  color: #008b8b;
+  margin-right: 30px;
+}
+
+h3 {
+  font-family: "Yusei Magic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.mabtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+}
+
+#mandala {
+  width: 200px;
+  height: 50px;
+  font-family: "Yusei Magic", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+#mandala:hover {
+  background-color: #008080;
+  color: #fff;
+}
+
+#wholewrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  }
+
+
+
+#download {
+  display: none;
+  width: 130px;
+  text-align: center;
+  border: 3px solid #dda0dd;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 20px;
+  padding: 8px;
+}
+
+.kanban-container {
+  background-color: #ffe4e1;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.kanban-title {
+  font-family: "Yusei Magic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  color: #db7093;
+}
+
+/* ファイルを選ぶボタンを変更 */
+.file-button::file-selector-button {
+  padding: 5px 20px;
+  color: #ffffff;
+  background-color: #40e0d0;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.file-button:hover {
+  opacity: 0.8;
+}
+
+/* しめきり指定 */
+.limit {
+  background-color: #e0ffff;
+  padding: 30px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#limitdate {
+  margin-right: 50px;
+  font-size: x-large;
+  font-family: "Yusei Magic", sans-serif;
+}
+
+#year,
+#month,
+#date {
+  width: 80px;
+  height: 30px;
+  font-size: large;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.set{
+  margin-left: 20px;
+  font-family: "Yusei Magic", sans-serif;
+  border-radius: 1rem;
+}
+
+.set:hover{
+  background-color: #6495ed;
+  color:#fff
+}
+
+
+/*カウントダウン画面  */
+
+.rest {
+  font-family: "Yusei Magic", sans-serif;
+  color: #dc143c;
+  font-weight: 400;
+  font-weight: bold;
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.countdown-container {
+  margin: 5rem;
+}
+
+.time-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.time {
+  margin: 0.2rem;
+  background-color: #ffb6c1;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+#days,
+#hours,
+#minutes,
+#seconds {
+  font-size: 3rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+#reset-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reset {
+  font-family: "Yusei Magic", sans-serif;
+  background-color: #d8bfd8;
+  border-radius: 10px;
+  height: 40px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.reset:hover{
+  cursor:pointer;
+  }

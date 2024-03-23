@@ -1,0 +1,271 @@
+body {
+  background-color: #e0ffff;
+}
+
+header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  font-size: 40px;
+  font-family: "Permanent Marker", cursive;
+}
+
+h1 {
+  font-size: 30px;
+  font-family: "Nico Moji";
+  color: #ff7f50;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+/* テーブル部分 */
+textarea {
+  background-color: #d8bfd8;
+  text-align: center;
+}
+
+#output {
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 
+main {
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+
+footer {
+  background-color: #ffffe0;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+} */
+
+/* 説明コーナー指定 */
+#info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px;
+  padding: 10px;
+}
+
+h4 {
+  font-weight: bold;
+}
+
+/* SaveとClearボタン */
+
+.button {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px;
+}
+
+#save {
+  width: 200px;
+  height: auto;
+  font-size: larger;
+  font-family: "Amatic SC", cursive;
+  cursor: pointer;
+  border-radius: 0.5em;
+}
+
+#clear {
+  width: 200px;
+  height: auto;
+  font-size: larger;
+  font-family: "Amatic SC", cursive;
+  cursor: pointer;
+  border-radius: 0.5em;
+}
+#save:hover {
+  background: #ffb6c1;
+  color: #fff;
+}
+
+#clear:hover {
+  background: #add8e6;
+  color: #fff;
+}
+
+#frame1 {
+  cursor: pointer;
+}
+#frame2 {
+  cursor: pointer;
+}
+#frame3 {
+  cursor: pointer;
+}
+#frame4 {
+  cursor: pointer;
+}
+#frame5 {
+  cursor: pointer;
+}
+#frame6 {
+  cursor: pointer;
+}
+#frame7 {
+  cursor: pointer;
+}
+#frame8 {
+  cursor: pointer;
+}
+
+.button_1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+#save_1:hover {
+  background: #ffb6c1;
+  color: #fff;
+}
+
+#clear_1:hover {
+  background: #add8e6;
+  color: #fff;
+}
+
+.button_2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+#save_2:hover {
+  background: #ffb6c1;
+  color: #fff;
+}
+
+#clear_2:hover {
+  background: #add8e6;
+  color: #fff;
+}
+
+.button_3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+#save_3:hover {
+  background: #ffb6c1;
+  color: #fff;
+}
+
+#clear_3:hover {
+  background: #add8e6;
+  color: #fff;
+}
+
+.button_4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+#save_4:hover {
+  background: #ffb6c1;
+  color: #fff;
+}
+
+#clear_4:hover {
+  background: #add8e6;
+  color: #fff;
+}
+
+.button_5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+#save_5:hover {
+  background: #ffb6c1;
+  color: #fff;
+}
+
+#clear_5:hover {
+  background: #add8e6;
+  color: #fff;
+}
+
+.button_6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+#save_6:hover {
+  background: #ffb6c1;
+  color: #fff;
+}
+
+#clear_6:hover {
+  background: #add8e6;
+  color: #fff;
+}
+
+.button_7 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+#save_7:hover {
+  background: #ffb6c1;
+  color: #fff;
+}
+
+#clear_7:hover {
+  background: #add8e6;
+  color: #fff;
+}
+
+.button_8 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+#save_8:hover {
+  background: #ffb6c1;
+  color: #fff;
+}
+
+#clear_8:hover {
+  background: #add8e6;
+  color: #fff;
+}
+
+.return {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+#returnbtn{
+    width:200px;
+    height:50px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 1em;
+}
+
+#returnbtn:hover {
+  background-color: #ff7f50;
+  color: #fff;
+}

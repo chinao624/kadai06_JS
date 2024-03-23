@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat App</title>
+    <style>
+      .remove:hover {
+        background: aquamarine;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC:700" rel="stylesheet">
+    <link rel="stylesheet" href="css/sample.css" />
+    <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
+    <script type="module" src="js/mandala.js"></script>
+
+  </head>
+
+  <body>
+    <!-- コンテンツ表示画面 -->
+    <div>
+      <h1>みんなでおうえん！</h1><br>
+      <header>KIDS' MANDALA CHART</header>
+<!-- テーブルエリア -->
+      <table id="mandala">
+        <table border="3" width="500" height="500" cellspacing="3" cellpadding="10" bgcolor="#ffd700" align="center">
+          <tr bgcolor="#ffefd5">
+          <td id="frame1"><textarea id="todo1"></textarea></td>
+          <td id="frame2"><textarea id="todo2"></textarea></td>
+          <td id="frame3"><textarea id="todo3"></textarea></td>
+          </tr>
+          <tr bgcolor="#ffefd5">
+          <td id="frame4"><textarea id="todo4"></textarea></td>
+          <td><textarea id="goal"></textarea></td>
+          <td id="frame5"><textarea id="todo5"></textarea></td>
+          </tr>
+          <tr bgcolor="#ffefd5">
+          <td id="frame6"><textarea id="todo6"></textarea></td>
+          <td id="frame7"><textarea id="todo7"></textarea></td>
+          <td id="frame8"><textarea id="todo8"></textarea></td>
+          </tr>
+          </table>
+<!-- 説明コーナー -->
+<div id="info">
+<h4>Mandala Chartの書き方<br></h4>
+
+1️⃣　一番まんなかに、かなえたいもくひょうを書く。<br>
+2️⃣　まわりの８マスに、もくひょうをかなえるためにひつようなことを書く。書いたらSAVE<br>
+3️⃣　８マスの「ひつようなこと」のために何をしたらよいかを８つずつ書く<br>
+4️⃣　まわりのマスを一つずつクリックして、出てきた表にさらに何をしたらよいかを書く<br>
+5️⃣　出てきた表に書けたら、SAVE<br>
+6️⃣　まわりの人にも見てもらっていけんをもらおう！<br>
+</div>
+          <!-- 最初のsave / clearボタン -->
+
+          <div class="button">
+            <button id="save">SAVE!</button>
+            <button id="clear">CLEAR</button>
+          </div>
+
+          
+      <div id="output"></div>
+
+      <!-- １のマスの書き込み用テーブル＆save&clearボタン -->
+      <div id="todo1_open">
+      <table>
+        <table border="3" width="250" height="250" cellspacing="3" cellpadding="10" bgcolor="#6495ed" align="center">
+          <tr bgcolor="#e6e6fa">
+          <td><textarea id="todo1_1"></textarea></td>
+          <td><textarea id="todo1_2"></textarea></td>
+          <td><textarea id="todo1_3"></textarea></td>
+          </tr>
+          <tr bgcolor="#e6e6fa">
+          <td><textarea id="todo1_4"></textarea></td>
+          <th id="todo1_center"></th>
+          <td><textarea id="todo1_5"></textarea></td>
+          </tr>
+          <tr bgcolor="#e6e6fa">
+          <td><textarea id="todo1_6"></textarea></td>
+          <td><textarea id="todo1_7"></textarea></td>
+          <td><textarea id="todo1_8"></textarea></td>
+          </tr>
+          </table>
+          <div class="button_1">
+            <button id="save_1">SAVE!</button>
+            <button id="clear_1">CLEAR</button>
+          </div>
+        </div>
+    
+
+          <!-- 2のマスの書き込み用テーブル＆save&clearボタン -->
+          <div id="todo2_open">
+            <table>
+              <table border="3" width="250" height="250" cellspacing="3" cellpadding="10" bgcolor="#6495ed" align="center">
+                <tr bgcolor="#e6e6fa">
+                <td><textarea id="todo2_1"></textarea></td>
+                <td><textarea id="todo2_2"></textarea></td>
+                <td><textarea id="todo2_3"></textarea></td>
+                </tr>
+                <tr bgcolor="#e6e6fa">
+                <td><textarea id="todo2_4"></textarea></td>
+                <th id="todo2_center"></th>
+                <td><textarea id="todo2_5"></textarea></td>
+                </tr>
+                <tr bgcolor="#e6e6fa">
+                <td><textarea id="todo2_6"></textarea></td>
+                <td><textarea id="todo2_7"></textarea></td>
+                <td><textarea id="todo2_8"></textarea></td>
+                </tr>
+                </table>
+                <div class="button_2">
+                  <button id="save_2">SAVE!</button>
+                  <button id="clear_2">CLEAR</button>
+                </div>
+              </div>
+         
+
+           <!-- 3のマスの書き込み用テーブル＆save&clearボタン -->
+           <div id="todo3_open">
+            <table>
+              <table border="3" width="250" height="250" cellspacing="3" cellpadding="10" bgcolor="#6495ed" align="center">
+                <tr bgcolor="#e6e6fa">
+                <td><textarea id="todo3_1"></textarea></td>
+                <td><textarea id="todo3_2"></textarea></td>
+                <td><textarea id="todo3_3"></textarea></td>
+                </tr>
+                <tr bgcolor="#e6e6fa">
+                <td><textarea id="todo3_4"></textarea></td>
+                <th id="todo3_center"></th>
+                <td><textarea id="todo3_5"></textarea></td>
+                </tr>
+                <tr bgcolor="#e6e6fa">
+                <td><textarea id="todo3_6"></textarea></td>
+                <td><textarea id="todo3_7"></textarea></td>
+                <td><textarea id="todo3_8"></textarea></td>
+                </tr>
+                </table>
+                <div class="button_3">
+                  <button id="save_3">SAVE!</button>
+                  <button id="clear_3">CLEAR</button>
+                </div>
+              </div>
+
+              <!-- 4のマスの書き込み用テーブル＆save&clearボタン -->
+              <div id="todo4_open">
+                <table>
+                  <table border="3" width="250" height="250" cellspacing="3" cellpadding="10" bgcolor="#6495ed" align="center">
+                    <tr bgcolor="#e6e6fa">
+                    <td><textarea id="todo4_1"></textarea></td>
+                    <td><textarea id="todo4_2"></textarea></td>
+                    <td><textarea id="todo4_3"></textarea></td>
+                    </tr>
+                    <tr bgcolor="#e6e6fa">
+                    <td><textarea id="todo4_4"></textarea></td>
+                    <th id="todo4_center"></th>
+                    <td><textarea id="todo4_5"></textarea></td>
+                    </tr>
+                    <tr bgcolor="#e6e6fa">
+                    <td><textarea id="todo4_6"></textarea></td>
+                    <td><textarea id="todo4_7"></textarea></td>
+                    <td><textarea id="todo4_8"></textarea></td>
+                    </tr>
+                    </table>
+                    <div class="button_4">
+                      <button id="save_4">SAVE!</button>
+                      <button id="clear_4">CLEAR</button>
+                    </div>
+                  </div>
+
+                      <!-- 5のマスの書き込み用テーブル＆save&clearボタン -->
+              <div id="todo5_open">
+                <table>
+                  <table border="3" width="250" height="250" cellspacing="3" cellpadding="10" bgcolor="#6495ed" align="center">
+                    <tr bgcolor="#e6e6fa">
+                    <td><textarea id="todo5_1"></textarea></td>
+                    <td><textarea id="todo5_2"></textarea></td>
+                    <td><textarea id="todo5_3"></textarea></td>
+                    </tr>
+                    <tr bgcolor="#e6e6fa">
+                    <td><textarea id="todo5_4"></textarea></td>
+                    <th id="todo5_center"></th>
+                    <td><textarea id="todo5_5"></textarea></td>
+                    </tr>
+                    <tr bgcolor="#e6e6fa">
+                    <td><textarea id="todo5_6"></textarea></td>
+                    <td><textarea id="todo5_7"></textarea></td>
+                    <td><textarea id="todo5_8"></textarea></td>
+                    </tr>
+                    </table>
+                    <div class="button_5">
+                      <button id="save_5">SAVE!</button>
+                      <button id="clear_5">CLEAR</button>
+                    </div>
+                  </div>
+
+                  <!-- 6のマスの書き込み用テーブル＆save&clearボタン -->
+              <div id="todo6_open">
+                <table>
+                  <table border="3" width="250" height="250" cellspacing="3" cellpadding="10" bgcolor="#6495ed" align="center">
+                    <tr bgcolor="#e6e6fa">
+                    <td><textarea id="todo6_1"></textarea></td>
+                    <td><textarea id="todo6_2"></textarea></td>
+                    <td><textarea id="todo6_3"></textarea></td>
+                    </tr>
+                    <tr bgcolor="#e6e6fa">
+                    <td><textarea id="todo6_4"></textarea></td>
+                    <th id="todo6_center"></th>
+                    <td><textarea id="todo6_5"></textarea></td>
+                    </tr>
+                    <tr bgcolor="#e6e6fa">
+                    <td><textarea id="todo6_6"></textarea></td>
+                    <td><textarea id="todo6_7"></textarea></td>
+                    <td><textarea id="todo6_8"></textarea></td>
+                    </tr>
+                    </table>
+                    <div class="button_6">
+                      <button id="save_6">SAVE!</button>
+                      <button id="clear_6">CLEAR</button>
+                    </div>
+                  </div>
+
+                    <!-- 7のマスの書き込み用テーブル＆save&clearボタン -->
+              <div id="todo7_open">
+                <table>
+                  <table border="3" width="250" height="250" cellspacing="3" cellpadding="10" bgcolor="#6495ed" align="center">
+                    <tr bgcolor="#e6e6fa">
+                    <td><textarea id="todo7_1"></textarea></td>
+                    <td><textarea id="todo7_2"></textarea></td>
+                    <td><textarea id="todo7_3"></textarea></td>
+                    </tr>
+                    <tr bgcolor="#e6e6fa">
+                    <td><textarea id="todo7_4"></textarea></td>
+                    <th id="todo7_center"></th>
+                    <td><textarea id="todo7_5"></textarea></td>
+                    </tr>
+                    <tr bgcolor="#e6e6fa">
+                    <td><textarea id="todo7_6"></textarea></td>
+                    <td><textarea id="todo7_7"></textarea></td>
+                    <td><textarea id="todo7_8"></textarea></td>
+                    </tr>
+                    </table>
+                    <div class="button_7">
+                      <button id="save_7">SAVE!</button>
+                      <button id="clear_7">CLEAR</button>
+                    </div>
+                  </div>
+
+                    <!-- 8のマスの書き込み用テーブル＆save&clearボタン -->
+              <div id="todo8_open">
+                <table>
+                  <table border="3" width="250" height="250" cellspacing="3" cellpadding="10" bgcolor="#6495ed" align="center">
+                    <tr bgcolor="#e6e6fa">
+                    <td><textarea id="todo8_1"></textarea></td>
+                    <td><textarea id="todo8_2"></textarea></td>
+                    <td><textarea id="todo8_3"></textarea></td>
+                    </tr>
+                    <tr bgcolor="#e6e6fa">
+                    <td><textarea id="todo8_4"></textarea></td>
+                    <th id="todo8_center"></th>
+                    <td><textarea id="todo8_5"></textarea></td>
+                    </tr>
+                    <tr bgcolor="#e6e6fa">
+                    <td><textarea id="todo8_6"></textarea></td>
+                    <td><textarea id="todo8_7"></textarea></td>
+                    <td><textarea id="todo8_8"></textarea></td>
+                    </tr>
+                    </table>
+                    <div class="button_8">
+                      <button id="save_8">SAVE!</button>
+                      <button id="clear_8">CLEAR</button>
+                    </div>
+                  </div>
+      <div class="return">
+          <button id="returnbtn" onclick="location.href='index.html'">やることリストにもどる</button>
+</div>
+</div>
+
+    <!-- firebase -->
+    <script type="module">
+     
+     </script>
+  </body>
+</html>
